@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drinks&Drinks</title>
+    <link rel="stylesheet" href="style.css">
+    
+    
+</head>
+<body>
+
+<header>  
+
+     <nav>
+        <div class="nav-data">
+            <h1>drinks</h1>
+            <h2>¡animate a explorar!</h2>
+        </div>
+
+        <div class="btn-create"> 
+               <button id="toggleFormularioBtn" class="btn-nav">crea tu coctel</button>
+        </div>
+         
+      
+   </nav>
+</header> 
+<!-- ---------------------------------------------------------------------- -->
+    
+<!--form barra de busqeda -->
+
+<form id="searchForm">
+        <select id="option" title="b" class="search-box" onchange="filterDrinks()">
+            <option value="buscar">Buscar</option>
+            <option value="name">Nombre</option>
+            <option value="alcoholic">Con alcohol</option>
+            <option value="non-alcoholic">Sin alcohol</option>
+            <option value="ingredients">Ingredientes</option>
+        </select>
+        
+        <button type="button" class="search-btn" onclick="searchCocktail()">Buscar</button>
+        <button type="button" class="clear-btn" onclick="clearSearch()">Borrar</button>
+    </form>
+
+    <div id="cocktailInfo">
+        <!-- Aquí se mostrará la información del cóctel seleccionado -->
+    </div>
+
+<!-- ------------------------------------------------------ -->
+
+<!-- spiner -->
+<div class="spinner"></div>
+<!-- spiner -->
+
+
+<main class="main-container">
+
+
+     <div id="container"></div>
+
+
+
+</main>
+   <script src="archivos-js/get.js"></script> 
+</body>
+</html>
