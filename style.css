@@ -116,6 +116,7 @@ select {
 	overflow-y: auto;
 	margin: auto;
 	background-color: #0a0a0a;
+	display: flex;
 }
 
 .card {
@@ -144,7 +145,6 @@ select {
 
 .view_detail_btn {
 	padding: 5px 10px;
-	/* background-color: var(--color-prymary); */
 	border: none;
 	border-radius: 4px;
 	cursor: pointer;
@@ -212,4 +212,147 @@ select {
 	justify-content: center;
 	display: flex;
 	flex-wrap: wrap;
+}
+
+/* Estilos para la tarjeta de coctel crea tu coctel*/
+.coctelcard {
+	display: none;
+}
+#nuevaCoctelCard {
+	border-radius: 8px;
+	margin: 10px;
+	padding: 10px;
+	width: calc(30% - 20px);
+	background: #f8f8f8;
+	border: solid #bdbdbd 1px;
+	box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.5);
+	filter: alpha(opacity=70);
+	margin: auto;
+}
+
+/* Estilos para el textarea */
+textarea {
+	width: 50%;
+	height: 50px;
+	resize: vertical;
+}
+
+/* Estilos para los botones */
+.submit-btn {
+	background-color: var(--color-prymary);
+	color: rgb(15, 7, 7);
+	border: none;
+	border-radius: 20px;
+	cursor: pointer;
+	transition: background-color 0.3s;
+	margin: 4px;
+	height: 37px;
+	font-family: "Marcellus SC", serif;
+	font-weight: 600;
+}
+
+#cancelarBtn {
+	padding: 10px 20px;
+	color: rgb(8, 8, 8);
+	border-radius: 20px;
+	cursor: pointer;
+	margin: 4px;
+	height: 37px;
+	border: none;
+	font-family: "Marcellus SC", serif;
+	font-weight: 500;
+	background: rgb(240, 210, 240);
+	border: 1px solid white;
+	box-shadow: 0px 2px 0 white, 2px 4px 6px #eee;
+	letter-spacing: 1px;
+	-webkit-transition: all 150ms linear;
+	transition: all 150ms linear;
+}
+#cancelarBtn:hover {
+	background: #eebeea;
+	border: 1px solid rgba(0, 0, 0, 0.05);
+	box-shadow: 1px 1px 2px rgba(255, 255, 255, 0.2);
+	color: #f80858;
+	text-decoration: none;
+	text-shadow: -1px -1px 0 #6b4f74;
+	-webkit-transition: all 250ms linear;
+	transition: all 250ms linear;
+}
+
+label {
+	font-weight: bold;
+	font-family: var(--texto-secundary);
+}
+
+input[type="text"],
+textarea {
+	width: 100%;
+	padding: 10px;
+	margin-top: 5px;
+	margin-bottom: 10px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	box-sizing: border-box;
+}
+
+#coctelForm {
+	display: flex;
+	flex-direction: column;
+	align-items: stretch;
+}
+
+#detalleContainer {
+	background-color: #f9f9f9;
+	border-radius: 10px;
+	padding: 20px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	margin: 20px;
+	margin: auto;
+	width: calc(30% - 20px);
+}
+
+#detalleContainer h2 {
+	font-size: 24px;
+	margin-bottom: 20px;
+}
+
+#editForm {
+	display: flex;
+	flex-direction: column;
+}
+
+#editForm label {
+	margin-bottom: 10px;
+	font-weight: bold;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+#editForm input[type="text"],
+#editForm textarea {
+	padding: 10px;
+	margin-bottom: 15px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	font-size: 16px;
+}
+
+#editForm button {
+	padding: 10px 20px;
+	background-color: #007bff;
+	color: white;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	transition: background-color 0.3s;
+}
+
+#editForm button:hover {
+	background-color: #0056b3;
+}
+.oculto {
+	display: none;
 }

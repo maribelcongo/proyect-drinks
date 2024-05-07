@@ -26,10 +26,19 @@
    </nav>
 </header> 
 <!-- ---------------------------------------------------------------------- -->
-    
+
+
+<!-- spiner -->
+<div class="spinner"></div>
+<!-- spiner -->
+
+
+
+
+  <main class="main-container">  
 <!--form barra de busqeda -->
 
-<form id="searchForm">
+   <form id="searchForm">
         <select id="option" title="b" class="search-box" onchange="filterDrinks()">
             <option value="buscar">Buscar</option>
             <option value="name">Nombre</option>
@@ -48,19 +57,41 @@
 
 <!-- ------------------------------------------------------ -->
 
-<!-- spiner -->
-<div class="spinner"></div>
-<!-- spiner -->
 
+<!-- <main class="main-container"> -->
 
-<main class="main-container">
+    <!-- formulario crear nuevo coctel -->
+         <div id="nuevaCoctelCard" class="coctel-card oculto">
+            <form id="coctelForm">
+                <label for="nameInput">Nombre:</label>
+                <input type="text" id="nameInput" name="nameInput" required><br>
+
+                <label for="preparationInput">Preparación:</label>
+                <textarea id="preparationInput" name="preparationInput" required></textarea><br>
+
+                <label for="imageInput">URL de la imagen:</label>
+                <input type="text" id="imageInput" name="imageInput" required><br>
+
+                <label for="alcoholInput">Tipo de alcohol:</label>
+                <input type="text" id="alcoholInput" name="alcoholInput" required><br>
+
+                <label for="ingredientsInput">Ingredientes (separados por coma):</label>
+                <input type="text" id="ingredientsInput" name="ingredientsInput" required><br>
+
+                <button type="submit" class="submit-btn">Enviar</button>
+                <button type="button" id="cancelarBtn">Cancelar</button>
+            </form>
+        </div>
 
 
      <div id="container"></div>
+     <div id="coctelContainer"></div>
 
 
 
 </main>
+
    <script src="archivos-js/get.js"></script> 
+   <script src="archivos-js/post.js"></script> 
 </body>
 </html>
