@@ -43,9 +43,8 @@ nav {
 h1 {
 	color: var(--color-prymary);
 	font-family: "Slackey", sans-serif;
-	font-weight: 800;
 	font-style: normal;
-	/* font-size: 2.5rem; */
+	font-size: 2.5rem;
 	font-size: 350%;
 }
 
@@ -197,6 +196,10 @@ select {
 	-webkit-transition: all 150ms linear;
 	transition: all 150ms linear;
 }
+#result {
+	margin-top: 20px;
+	text-align: center;
+}
 .clear-btn:hover {
 	background: #eebeea;
 	border: 1px solid rgba(0, 0, 0, 0.05);
@@ -299,6 +302,10 @@ textarea {
 	display: flex;
 	flex-direction: column;
 	align-items: stretch;
+}
+
+#detalleCoctel {
+	display: none;
 }
 
 #detalleContainer {
