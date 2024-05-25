@@ -1,0 +1,17 @@
+@import "abstracts/variables";
+@import "abstracts/mixins";
+// base
+@import "base/base";
+@import "base/typography";
+// componentes
+@import "components/buttons.scss";
+@import "components/spinner.scss";
+@import "components/search-form.scss";
+@import "components/new-card.scss";
+@import "components/detail-card.scss";
+@import "components/edit-card.scss";
+
+//layout
+@import "layout/navbar.scss";
+@import "layout/main-container.scss";
+@import "layout/sections.scss";

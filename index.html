@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Drinks&Drinks</title>
-    <link rel="stylesheet" href="style.css">
+   <link rel="stylesheet" href="main.css">
     
     
 </head>
@@ -28,55 +28,51 @@
 <!-- ---------------------------------------------------------------------- -->
 
 
+
+  <main class="main-container" id="mainContent ">  
+
 <!-- spiner -->
 <div class="spinner"></div>
 <!-- spiner -->
 
 
+    <!--form barra de busqeda -->
 
-
-  <main class="main-container">  
-<!--form barra de busqeda -->
-
-   <form id="searchForm">
-        <select id="option" title="b" class="search-box" onchange="filterDrinks()">
+ <form id="searchForm">
+        
+        <select id="option" title="option-search" class="search-box">
             <option value="buscar">Buscar</option>
             <option value="name">Nombre</option>
-            <option value="alcoholic">Con alcohol</option>
-            <option value="non-alcoholic">Sin alcohol</option>
+            <option value="alcohol">Alcohol</option>
             <option value="ingredients">Ingredientes</option>
         </select>
-        
+        <input type="text" id="searchInput" class="search-box" placeholder="Buscar...">
         <button type="button" class="search-btn" onclick="searchCocktail()">Buscar</button>
         <button type="button" class="clear-btn" onclick="clearSearch()">Borrar</button>
     </form>
 
-    <!-- <div id="cocktailInfo">
-         Aquí se mostrará la información del cóctel seleccionado 
-    </div> -->
+    <div id="elementsContainer"></div>
 
+   
 <!-- ------------------------------------------------------ -->
-
-
-
 
     <!-- formulario crear nuevo coctel -->
          <div id="nuevaCoctelCard" class="coctel-card oculto">
             <form id="coctelForm">
                 <label for="nameInput">Nombre:</label>
-                <input type="text" id="nameInput" name="nameInput" required><br>
+                <input type="text" id="nameInput" name="nameInput" required>
 
                 <label for="preparationInput">Preparación:</label>
-                <textarea id="preparationInput" name="preparationInput" required></textarea><br>
+                <textarea id="preparationInput" name="preparationInput" required></textarea>
 
                 <label for="imageInput">URL de la imagen:</label>
-                <input type="text" id="imageInput" name="imageInput" required><br>
+                <input type="text" id="imageInput" name="imageInput" required>
 
-                <label for="alcoholInput">Tipo de alcohol:</label>
-                <input type="text" id="alcoholInput" name="alcoholInput" required><br>
+                <label for="alcoholInput">alcohol:</label>
+                <input type="text" id="alcoholInput" name="alcoholInput" required>
 
                 <label for="ingredientsInput">Ingredientes (separados por coma):</label>
-                <input type="text" id="ingredientsInput" name="ingredientsInput" required><br>
+                <input type="text" id="ingredientsInput" name="ingredientsInput" required>
 
                 <button type="submit" class="submit-btn">Enviar</button>
                 <button type="button" id="cancelarBtn">Cancelar</button>
@@ -91,10 +87,13 @@
 
 
 </main>
+    
 
-   <script src="archivos-js/get.js"></script> 
+    <script src="archivos-js/search.js"></script>
+    <script src="archivos-js/get.js"></script> 
    <script src="archivos-js/post.js"></script> 
    <script src="archivos-js/put.js"></script>
    <script src="archivos-js/delete.js"></script>
+
 </body>
 </html>

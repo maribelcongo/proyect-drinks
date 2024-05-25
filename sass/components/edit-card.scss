@@ -1,0 +1,32 @@
+#editForm {
+	display: flex;
+	flex-direction: column;
+}
+
+#editForm label {
+	margin-bottom: 10px;
+	font-weight: bold;
+}
+
+#editForm input[type="text"],
+#editForm textarea {
+	padding: 10px;
+	margin-bottom: 15px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	font-size: 16px;
+}
+
+#editForm button {
+	padding: 10px 20px;
+	background-color: #ff00ea;
+	color: white;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	transition: background-color 0.3s;
+}
+
+#editForm button:hover {
+	background-color: #b3007d;
+}
