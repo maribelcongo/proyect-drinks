@@ -112,6 +112,14 @@ select {
   transition: all 250ms linear;
 }
 
+#detalleCoctel {
+  background-color: aqua;
+}
+
+#detalleContainer {
+  background-color: brown;
+}
+
 #editForm {
   display: flex;
   flex-direction: column;

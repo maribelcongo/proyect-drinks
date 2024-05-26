@@ -40,6 +40,8 @@ function viewDetail(id) {
         console.error('Elemento detalleCoctel no encontrado.');
     }
 }
+// ir atras
+
 
 
 
