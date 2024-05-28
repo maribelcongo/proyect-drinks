@@ -1,6 +1,6 @@
 // buscar por nombre
 
- // barra busquedad nombre
+//  barra busquedad nombre
 function filterDrinks() {
     const option = document.getElementById('option').value;
     const searchInput = document.getElementById('searchInput');
@@ -73,5 +73,6 @@ function clearSearch() {
     searchInput.style.display = 'none';
     document.getElementById('option').value = 'buscar';
     const main = document.getElementById('main');
-    main.innerHTML = ''; // Clear the main section
+    main.innerHTML = ''; 
 }
+

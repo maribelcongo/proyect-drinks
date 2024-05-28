@@ -1,10 +1,7 @@
 main {
 	background-color: #0a0a0a;
-	.main-conainer {
-		gap: 20px;
-		overflow-y: auto;
-		margin: auto;
-	}
+	
+}
 
 	.card {
 		border-radius: 8px;
@@ -14,9 +11,7 @@ main {
 		width: calc(30% - 20px);
 		text-align: center;
 		background: #f8f8f8;
-		border: solid #bdbdbd 1px;
 		box-shadow: 3px 3px 15px rgb(245, 6, 137);
-		filter: alpha(opacity=70);
 	}
 
 	.card_img {
@@ -48,4 +43,10 @@ main {
 		outline-color: rgba(255, 255, 255, 0);
 		text-shadow: 1px 1px 2px #f1addd;
 	}
+
+
+#container{
+	display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }

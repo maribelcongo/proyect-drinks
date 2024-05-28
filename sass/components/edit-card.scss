@@ -1,32 +1,73 @@
 #editForm {
 	display: flex;
 	flex-direction: column;
+	padding: 8px;
+	margin: 15px;
+	margin: auto;
+	font-family: $texto-secundary;
+	color: $color-primary;
+}
+h2 {
+	color: $color-primary;
+	display: flex;
+	justify-content: center;
 }
 
-#editForm label {
-	margin-bottom: 10px;
-	font-weight: bold;
+#editName {
+	
+	
+    width: 100%;
+    border: 1px solid rgb(248, 133, 214);
+    border-radius: 8px;
+    margin-bottom: 7px;
+    padding: 9px;
+	
 }
 
-#editForm input[type="text"],
-#editForm textarea {
-	padding: 10px;
-	margin-bottom: 15px;
-	border: 1px solid #ccc;
-	border-radius: 5px;
-	font-size: 16px;
+
+
+#editImage {
+
+    width: 100%;
+    border: 1px solid rgb(248, 133, 214);
+    border-radius: 8px;
+    margin-bottom: 7px;
+    padding: 9px;
+	
+}
+#editPreparation {
+	height: 8em;
+	width: 100%;
+	border: 1px solid rgb(248, 133, 214);
+	border-radius: 8px;
+	margin-bottom: 7px;
+	padding: 9px;
+}
+#editIngredients {
+	height: 4em;
+	width: 100%;
+	border: 1px solid rgb(248, 133, 214);
+	border-radius: 8px;
+	margin-bottom: 7px;
+	padding: 9px;
 }
 
-#editForm button {
-	padding: 10px 20px;
-	background-color: #ff00ea;
-	color: white;
+.save-btn{
+height: 30px;
+	width: 100px;
+	border-radius: 20px;
+	background-color: $color-primary;
 	border: none;
-	border-radius: 5px;
 	cursor: pointer;
-	transition: background-color 0.3s;
 }
 
-#editForm button:hover {
-	background-color: #b3007d;
+ .cancel-edit{
+	height: 30px;
+	width: 100px;
+	border-radius: 20px;
+	cursor: pointer;
 }
+
+
+
+

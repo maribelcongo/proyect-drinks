@@ -10,9 +10,9 @@
 </head>
 <body>
 
-<header>  
 
-     <nav>
+<body>
+    <nav>
         <div class="nav-data">
             <h1>drinks</h1>
             <h2>¡animate a explorar!</h2>
@@ -21,68 +21,73 @@
         <div class="btn-create"> 
                <button id="toggleFormularioBtn" class="btn-nav">crea tu coctel</button>
         </div>
-         
+           <!-- crear coctel  card del formulario-->
       
-   </nav>
-</header> 
+
 <!-- ---------------------------------------------------------------------- -->
+    </nav>
+
+ 
 
 
 
-  <main class="main-container" id="mainContent ">  
 
-<!-- spiner -->
-<div class="spinner"></div>
-<!-- spiner -->
+    <main class="main-container"  id="main" >
+<!-- formulario barra busqueda -->
+<form id="searchForm">
+    <select id="option" title="b" class="search-box" onchange="filterDrinks()">
+        <option value="buscar">Buscar</option>
+        <option value="name">Nombre</option>
+        <option value="alcoholic">Alcohol</option>
+        <option value="ingredients">ingredientes</option>
 
+    </select>
 
-    <!--form barra de busqeda -->
+    <input type="text" id="searchInput" class="search-box"  placeholder="Ingrese el nombre del cóctel" />
+     
+    <button type="button" class="search-btn" onclick="searchCocktail()">Buscar</button>
+    <button type="button" class="clear-btn" onclick="clearSearch()">Borrar</button>
+</form>
 
- <form id="searchForm">
-        
-        <select id="option" title="option-search" class="search-box">
-            <option value="buscar">Buscar</option>
-            <option value="name">Nombre</option>
-            <option value="alcohol">Alcohol</option>
-            <option value="ingredients">Ingredientes</option>
-        </select>
-        <input type="text" id="searchInput" class="search-box" placeholder="Buscar...">
-        <button type="button" class="search-btn" onclick="searchCocktail()">Buscar</button>
-        <button type="button" class="clear-btn" onclick="clearSearch()">Borrar</button>
-    </form>
+<div class="spinner "id="spinner" ></div>
 
-
-<!-- ------------------------------------------------------ -->
-
-    <!-- formulario crear nuevo coctel -->
+<!-- fin barra busquedad -->
+        <!-- formulario crear nuevo coctel -->
          <div id="nuevaCoctelCard" class="coctel-card oculto">
             <form id="coctelForm">
                 <label for="nameInput">Nombre:</label>
-                <input type="text" id="nameInput" name="nameInput" required>
+                <input type="text" id="nameInput" name="nameInput" required><br>
 
                 <label for="preparationInput">Preparación:</label>
-                <textarea id="preparationInput" name="preparationInput" required></textarea>
+                <textarea id="preparationInput" name="preparationInput" required></textarea><br>
 
                 <label for="imageInput">URL de la imagen:</label>
-                <input type="text" id="imageInput" name="imageInput" required>
+                <input type="text" id="imageInput" name="imageInput" required><br>
 
-                <label for="alcoholInput">alcohol:</label>
-                <input type="text" id="alcoholInput" name="alcoholInput" required>
+                <label for="alcoholInput">Tipo de alcohol:</label>
+                <input type="text" id="alcoholInput" name="alcoholInput" required><br>
 
                 <label for="ingredientsInput">Ingredientes (separados por coma):</label>
-                <input type="text" id="ingredientsInput" name="ingredientsInput" required>
-
+                <input type="text" id="ingredientsInput" name="ingredientsInput" required><br>
+               <div class="btn-new">
                 <button type="submit" class="submit-btn">Enviar</button>
                 <button type="button" id="cancelarBtn">Cancelar</button>
+               </div>
             </form>
         </div>
+        <!-- --------------------------------------------------------------- -->
+         <div id="result" ></div>
+         <div id="container"></div>
+        <div id="detail-container"> </div>
+         <div id="detalleContainer"></div>
+      
+         
 
-      <div id="result" ></div>
-      <div id="container"></div>
-     <div id="detalleCoctel">
-    <div id="detalleContainer">
-               
-
+    
+           
+           
+                
+          
 
 </main>
     

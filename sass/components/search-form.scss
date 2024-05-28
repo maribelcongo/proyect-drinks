@@ -1,12 +1,19 @@
+#searchInput {
+display:none;
+}
+
+#searchForm{
+	display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
 .search-container {
 	text-align: center;
 	margin-top: 50px;
 }
-// form {
-// 	display: flex;
-// 	justify-content: center;
-// 	align-items: center;
-// }
 
 select {
 	border-color: $color-primary;
@@ -18,9 +25,7 @@ select {
 	padding: 8px;
 }
 
-.searchFrom {
-	margin: auto;
-}
+
 .search-btn {
 	padding: 10px 20px;
 	background-color: var(--color-prymary);
