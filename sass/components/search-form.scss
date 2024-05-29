@@ -1,14 +1,12 @@
 #searchInput {
-display:none;
+	display: none;
 }
 
-#searchForm{
+#searchForm {
 	display: flex;
-    justify-content: center;
-    align-items: center;
+	justify-content: center;
+	align-items: center;
 }
-
-
 
 .search-container {
 	text-align: center;
@@ -24,7 +22,6 @@ select {
 	margin: 16px;
 	padding: 8px;
 }
-
 
 .search-btn {
 	padding: 10px 20px;
@@ -66,4 +63,11 @@ select {
 	text-shadow: -1px -1px 0 #6b4f74;
 	-webkit-transition: all 250ms linear;
 	transition: all 250ms linear;
+}
+
+.search-box {
+	width: 25%;
+	border-radius: 15px;
+	margin: 16px;
+	padding: 8px;
 }

@@ -215,9 +215,12 @@ const editDetail = (id) => {
 
           <label for="editIngredients">Ingredientes (separados por coma):</label>
           <input type="text" id="editIngredients" name="editIngredients" value="${ingredientsList}" required>
-
+         
+          <div class="btn-save-sumit">
           <button type="submit" class="save-btn">Guardar Cambios</button>
           <button type="button" onclick="viewDetail(${id})" class="cancel-edit">Cancelar</button>
+          
+          </div>
         </form>
       `;
 

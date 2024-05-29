@@ -28,6 +28,10 @@ nav {
 		font-size: medium;
 		font-family: $texto-secundary;
 		margin: auto;
+
+		@include respond-to(small) {
+			display: none;
+		}
 	}
 
 	.btn-nav {

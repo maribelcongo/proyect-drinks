@@ -1,18 +1,21 @@
 
+
+
+//  
 document.addEventListener('DOMContentLoaded', function() {
             document.getElementById('toggleFormularioBtn').addEventListener('click', function() {
               
-                var elementsToHide = document.querySelectorAll('main > *:not(#nuevaCoctelCard)');
+                let elementsToHide = document.querySelectorAll('main > *:not(#nuevaCoctelCard)');
                 elementsToHide.forEach(function(element) {
                     element.style.display = 'none';
                 });
 
-                // Mostrar el formulario
+             
                 document.getElementById('nuevaCoctelCard').style.display = 'block';
             });
 
             document.getElementById('cancelarBtn').addEventListener('click', function() {
-            
+               
                 let elementsToShow = document.querySelectorAll('main > *:not(#nuevaCoctelCard)');
                 elementsToShow.forEach(function(element) {
                     element.style.display = 'block';
@@ -23,7 +26,7 @@ document.addEventListener('DOMContentLoaded', function() {
             });
 
             document.getElementById('coctelForm').addEventListener('submit', function(event) {
-                event.preventDefault(); 
+                event.preventDefault(); // Evitar que el formulario se envíe automáticamente
 
                 let nombre = document.getElementById('nameInput').value;
                 let preparacion = document.getElementById('preparationInput').value;
@@ -54,12 +57,11 @@ document.addEventListener('DOMContentLoaded', function() {
                 })
                 .then(data => {
                     console.log('Coctel creado exitosamente:', data);
-                   
+                    
                 })
                 .catch(error => {
                     console.error('Error:', error);
-                  
+                    
                 });
             });
         });
-
