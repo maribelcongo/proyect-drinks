@@ -14,7 +14,7 @@ const crearCoctelBtn = document.getElementById('crearCoctelBtn');
 
 const getDrinks = (fetchUrl) => {
   const spinner = document.querySelector('.spinner');
-  spinner.style.display = 'block'; // Mostrar el spinner
+  spinner.style.display = 'block'; 
   
   setTimeout(() => {
     fetch(fetchUrl)
@@ -41,13 +41,13 @@ const getDrinks = (fetchUrl) => {
         });
 
 
-        spinner.style.display = 'none'; // Ocultar el spinner
+        spinner.style.display = 'none';
       })
       .catch((err) => {
         console.log(err);
-        spinner.style.display = 'none'; // Ocultar el spinner en caso de error
+        spinner.style.display = 'none'; 
       });
-  }, 2000); // Esperar 2 segundos antes de realizar la petición
+  }, 2000); 
 };
 
 getDrinks(baseUrl);

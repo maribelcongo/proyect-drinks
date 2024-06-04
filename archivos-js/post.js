@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', function() {
             });
 
             document.getElementById('coctelForm').addEventListener('submit', function(event) {
-                event.preventDefault(); // Evitar que el formulario se envíe automáticamente
+                event.preventDefault(); 
 
                 let nombre = document.getElementById('nameInput').value;
                 let preparacion = document.getElementById('preparationInput').value;
