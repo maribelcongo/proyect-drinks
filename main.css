@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Marcellus+SC&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Tac+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Marcellus+SC&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Slackey&display=swap");
 * {
   box-sizing: border-box;
@@ -7,9 +7,15 @@
   padding: 0;
 }
 
+html {
+  height: 100%;
+}
+
 body {
+  height: 100%;
   font-size: 1em;
   text-transform: capitalize;
+  background-color: #0a0a0a;
 }
 
 button .btn-nav {
@@ -80,8 +86,8 @@ select {
 
 .search-btn {
   padding: 10px 20px;
-  background-color: var(--color-prymary);
-  color: rgb(194, 116, 116);
+  background-color: rgb(235, 15, 136);
+  color: rgb(10, 10, 10);
   border: none;
   border-radius: 20px;
   cursor: pointer;
@@ -128,6 +134,22 @@ select {
   padding: 8px;
 }
 
+.search-check {
+  width: 150px;
+  background: white;
+  border-radius: 6px;
+  padding: 8px;
+  margin: 5px;
+}
+
+.search-alcoholic {
+  margin: 15px;
+}
+
+.hidden {
+  display: none;
+}
+
 .oculto {
   display: none;
 }
@@ -138,18 +160,32 @@ select {
   justify-content: center;
   margin: 0em auto;
   display: none;
+  padding: 60px 40px 40px;
 }
 
 #coctelForm {
   display: flex;
   flex-direction: column;
-  width: 50%;
+  width: 60%;
   color: aliceblue;
   box-shadow: 3px 3px 15px rgb(245, 6, 137);
-  filter: alpha(opacity=70);
   padding: 8px;
-  margin: 15px;
   margin: auto;
+}
+@media (max-width: 600px) {
+  #coctelForm {
+    width: 90%;
+    max-width: 1000px;
+    font-family: "Roboto Condensed", sans-serif;
+  }
+}
+@media (max-width: 768px) {
+  #coctelForm {
+    width: 85%;
+    max-width: 1100px;
+    height: auto;
+    font-family: "Roboto Condensed", sans-serif;
+  }
 }
 
 #nameInput {
@@ -188,6 +224,11 @@ select {
   background-color: rgb(235, 15, 136);
 }
 
+.btn-new {
+  display: flex;
+  justify-content: center;
+}
+
 #cancelarBtn {
   height: 30px;
   width: 100px;
@@ -220,12 +261,23 @@ select {
 .detail-card_all {
   display: flex;
   flex-direction: column;
-  width: 70%;
+  width: 50%;
   color: aliceblue;
   box-shadow: 3px 3px 15px rgb(245, 6, 137);
-  filter: alpha(opacity=70);
   padding: 8px;
   margin: 15px;
+}
+@media (max-width: 600px) {
+  .detail-card_all {
+    width: 80%;
+    max-width: 1100px;
+  }
+}
+@media (max-width: 768px) {
+  .detail-card_all {
+    width: 85%;
+    max-width: 1100px;
+  }
 }
 
 .detail-card_header {
@@ -256,7 +308,7 @@ select {
 }
 
 .preparation {
-  height: 8em;
+  height: auto;
   width: 100%;
   border: 1px solid rgb(248, 133, 214);
   border-radius: 8px;
@@ -440,9 +492,11 @@ nav .btn-nav:hover {
   outline-color: rgba(255, 255, 255, 0);
   text-shadow: 1px 1px 2px #884273;
 }
-
-main {
-  background-color: #0a0a0a;
+@media (max-width: 600px) {
+  nav {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 .card {
@@ -496,6 +550,8 @@ main {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  max-width: 1100px;
+  margin: auto;
 }
 @media (max-width: 600px) {
   #container {
@@ -505,6 +561,17 @@ main {
 
 #result {
   display: none;
+}
+
+footer {
+  width: 100%;
+  position: absolute;
+}
+
+.tex-footer {
+  display: flex;
+  justify-content: center;
+  color: #fff;
 }
 
 /*# sourceMappingURL=main.css.map */

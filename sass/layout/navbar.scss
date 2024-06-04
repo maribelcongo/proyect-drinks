@@ -53,4 +53,9 @@ nav {
 		outline-color: rgba(255, 255, 255, 0);
 		text-shadow: 1px 1px 2px #884273;
 	}
+
+	@include respond-to(small) {
+		flex-direction: column;
+		align-items: center;
+	}
 }

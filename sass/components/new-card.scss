@@ -1,5 +1,5 @@
- .oculto{
-	display:none;
+.oculto {
+	display: none;
 }
 
 #nuevaCoctelCard {
@@ -7,20 +7,30 @@
 	flex-wrap: wrap;
 	justify-content: center;
 	margin: 0em auto;
-	display:none;
-
+	display: none;
+	padding: 60px 40px 40px;
 }
 
 #coctelForm {
 	display: flex;
 	flex-direction: column;
-	width: 50%;
+	width: 60%;
 	color: aliceblue;
 	box-shadow: 3px 3px 15px rgb(245, 6, 137);
-	filter: alpha(opacity=70);
 	padding: 8px;
-	margin: 15px;
-	margin:auto;
+	margin: auto;
+
+	@include respond-to(small) {
+		width: 90%;
+		max-width: 1000px;
+		font-family: $texto-break;
+	}
+	@include respond-to(medium) {
+		width: 85%;
+		max-width: 1100px;
+		height: auto;
+		font-family: $texto-break;
+	}
 }
 
 #nameInput {
@@ -58,7 +68,10 @@
 	border-radius: 20px;
 	background-color: $color-primary;
 }
-
+.btn-new {
+	display: flex;
+	justify-content: center;
+}
 #cancelarBtn {
 	height: 30px;
 	width: 100px;

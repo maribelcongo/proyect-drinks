@@ -13,12 +13,20 @@
 .detail-card_all {
 	display: flex;
 	flex-direction: column;
-	width: 70%;
+	width: 50%;
 	color: aliceblue;
 	box-shadow: 3px 3px 15px rgb(245, 6, 137);
-	filter: alpha(opacity=70);
 	padding: 8px;
 	margin: 15px;
+
+	@include respond-to(small) {
+		width: 80%;
+		max-width: 1100px;
+	}
+	@include respond-to(medium) {
+		width: 85%;
+		max-width: 1100px;
+	}
 }
 
 .detail-card_header {
@@ -49,7 +57,7 @@
 }
 
 .preparation {
-	height: 8em;
+	height: auto;
 	width: 100%;
 	border: 1px solid rgb(248, 133, 214);
 	border-radius: 8px;

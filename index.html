@@ -12,6 +12,9 @@
 
 
 <body>
+
+<header> 
+
     <nav>
         <div class="nav-data">
             <h1>drinks</h1>
@@ -21,39 +24,37 @@
         <div class="btn-create"> 
                <button id="toggleFormularioBtn" class="btn-nav">crea tu coctel</button>
         </div>
-           <!-- crear coctel  card del formulario-->
-      
-
-<!-- ---------------------------------------------------------------------- -->
+          
+    
     </nav>
+</header>
+ <!-- ---------------------------------------------------------------------------- -->
 
- 
-
-
-
-
-    <main class="main-container"  id="main" >
+<main class="main-container"  id="main" >
 <!-- formulario barra busqueda -->
+
 <form id="searchForm">
-    <select id="option" title="b" class="search-box" onchange="filterDrinks()">
+    <select id="option" title="d"   class="search-box" onchange="filterDrinks()">
         <option value="buscar">Buscar</option>
         <option value="name">Nombre</option>
         <option value="alcoholic">Alcohol</option>
-        <option value="ingredients">ingredientes</option>
-
+        <option value="ingredients">Ingredientes</option>
     </select>
 
-    <input type="text" id="searchInput" class="search-box"  placeholder="Ingrese el nombre del cóctel" />
-     
+    <input type="text" id="searchInput" class="search-box" placeholder="Ingrese el nombre del cóctel"/>
+    <input type="text" id="searchIngredient" class="search-box" placeholder="Ingrese el ingrediente" />
+    
     <button type="button" class="search-btn" onclick="searchCocktail()">Buscar</button>
     <button type="button" class="clear-btn" onclick="clearSearch()">Borrar</button>
 </form>
-
-<div class="spinner "id="spinner" ></div>
-
 <!-- fin barra busquedad -->
+
+<div class="spinner hidden "id="spinner-container" ></div>
+
+
         <!-- formulario crear nuevo coctel -->
-         <div id="nuevaCoctelCard" class="coctel-card oculto">
+     
+        <div id="nuevaCoctelCard" class="coctel-card oculto">
             <form id="coctelForm">
                 <label for="nameInput">Nombre:</label>
                 <input type="text" id="nameInput" name="nameInput" required><br>
@@ -80,25 +81,25 @@
          <div id="container"></div>
         <div id="detail-container"> </div>
          <div id="detalleContainer"></div>
-      
-         
+      <div id="cocktailContainer"></div>
+
+
+     
 
     
-           
-           
-                
-          
-
+               
 </main>
-     <footer>
-    <p>&copy; 2024 My Website </p>
-  </footer>
+
+
+    <footer>
+         <p class="tex-footer">  hecho con &#128147; por maribel</p>
+    </footer>
 
     <script src="archivos-js/search.js"></script>
     <script src="archivos-js/get.js"></script> 
    <script src="archivos-js/post.js"></script> 
    <script src="archivos-js/put.js"></script>
    <script src="archivos-js/delete.js"></script>
-
+<script src="archivos-js/page.js"></script>
 </body>
 </html>

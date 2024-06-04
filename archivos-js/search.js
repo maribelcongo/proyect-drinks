@@ -1,21 +1,29 @@
 // buscar por nombre
-
-//  barra busquedad nombre
 function filterDrinks() {
+    console.log("filterDrinks() called");
     const option = document.getElementById('option').value;
+    console.log("Selected option:", option);
     const searchInput = document.getElementById('searchInput');
+    const searchIngredient = document.getElementById('searchIngredient');
+
     if (option === 'name') {
         searchInput.style.display = 'block';
+        searchIngredient.style.display = 'none'; 
+    } else if (option === 'ingredients') {
+        searchInput.style.display = 'none'; 
+        searchIngredient.style.display = 'block';
     } else {
         searchInput.style.display = 'none';
+        searchIngredient.style.display = 'none';
     }
 }
 
 async function searchCocktail() {
     const option = document.getElementById('option').value;
     const searchInput = document.getElementById('searchInput').value.toLowerCase();
+    const searchIngredient = document.getElementById('searchIngredient').value.toLowerCase();
     const main = document.getElementById('main');
-    
+
     if (option === 'name' && searchInput) {
         try {
             const response = await fetch(baseUrl);
@@ -31,8 +39,34 @@ async function searchCocktail() {
         } catch (error) {
             console.error('Error fetching the cocktail data:', error);
         }
-    } else {
+    } else if (option === 'name') {
         alert('Seleccione la opción "Nombre" e ingrese un nombre válido.');
+    }
+
+    if (option === 'ingredients' && searchIngredient) {
+        try {
+            const response = await fetch(baseUrl);
+            const data = await response.json();
+            const drinks = data.filter(item => {
+                if (Array.isArray(item.ingredients)) {
+                    return item.ingredients.some(ingredient => ingredient.toLowerCase().includes(searchIngredient));
+                } else if (typeof item.ingredients === 'string') {
+                    return item.ingredients.toLowerCase().includes(searchIngredient);
+                }
+                return false;
+            });
+            if (drinks.length > 0) {
+                main.innerHTML = ''; 
+                drinks.forEach(drink => {
+                    const card = createCard(drink);
+                    main.appendChild(card);
+                });
+            } else {
+                main.innerHTML = '<p>Cóctel no encontrado</p>';
+            }
+        } catch (error) {
+            console.error('Error fetching the cocktail data:', error);
+        }
     }
 }
 
@@ -75,4 +109,3 @@ function clearSearch() {
     const main = document.getElementById('main');
     main.innerHTML = ''; 
 }
-
