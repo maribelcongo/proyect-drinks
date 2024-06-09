@@ -13,7 +13,7 @@ Proyec Drinks es una plataforma que ofrece una amplia gama de recetas de bebidas
 # PUT
 ![detalle](https://github.com/maribelcongo/proyect-drinks/assets/123903736/b60ea1ad-7d19-473d-8d2b-b1006acd2d84)
 
-# EDITAR EL CONTENIDO DE LA CARD
+# EDITAR EL CONTENIDO 
 ![editar](https://github.com/maribelcongo/proyect-drinks/assets/123903736/30ea7e59-b099-43aa-89f2-4eca42a7bad9)
 
 # DELETE
@@ -21,7 +21,7 @@ Proyec Drinks es una plataforma que ofrece una amplia gama de recetas de bebidas
 
 
 ## Demo
-Si quieres ver como quedó e interactuar con el  puedes dar click 💓[enlace](https://maribelcongo.github.io/proyec-drinks/).
+Si quieres ver como quedó e interactuar con el  puedes dar click 💓[enlace](https://maribelcongo.github.io/proyect-drinks/).
 
   
 
