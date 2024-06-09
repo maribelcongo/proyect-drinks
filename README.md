@@ -1,9 +1,8 @@
 # PROYECT-DRINKS
 
 # Informacion 
+Proyec Drinks es una plataforma que ofrece una amplia gama de recetas de bebidas, desde cócteles clásicos hasta mezclas innovadoras. Los usuarios pueden crear, modificar y buscar bebidas por nombre o por ingredientes, y obtener instrucciones detalladas para prepararlas.
 
-Este proyecto trata de un pagina de tragos, donde el usuario puede crear ,editar ,eliminar y buscar  segun su necesidad 
-toda la informacion porviene de una api creada por mi usando Mokapi .
 
 # GET
 ![todos](https://github.com/maribelcongo/proyect-drinks/assets/123903736/3443154d-3d61-4fd0-8b5e-9069f46e189d)
@@ -13,6 +12,7 @@ toda la informacion porviene de una api creada por mi usando Mokapi .
 
 # PUT
 ![detalle](https://github.com/maribelcongo/proyect-drinks/assets/123903736/b60ea1ad-7d19-473d-8d2b-b1006acd2d84)
+
 # EDITAR EL CONTENIDO DE LA CARD
 ![editar](https://github.com/maribelcongo/proyect-drinks/assets/123903736/30ea7e59-b099-43aa-89f2-4eca42a7bad9)
 
@@ -20,19 +20,27 @@ toda la informacion porviene de una api creada por mi usando Mokapi .
 ![eliminar modal](https://github.com/maribelcongo/proyect-drinks/assets/123903736/dd63b2e7-ccc0-48e4-ad40-f76c0bd6f10f)
 
 
+## Demo
+Si quieres ver como quedó e interactuar con el  puedes dar click 💓[enlace](https://maribelcongo.github.io/proyec-drinks/).
 
-Si quieres ver como quedó e interactuar con el  puedes dar click 💓[enlace]https://maribelcongo.github.io/proyec-drinks/
-
-# Funcionalidades del proyecto:
-
-* Traer toda la informacion y mostrsrla en forma de cards
-* Formulario para crear una nueva card
-* Mostsar el detalle de la card
-* Formulario para ditar el detalle
-* Agregar imagen mediante una url
-* Filtar por nombrey por ingrediente 
-* Mostar un spinner mientras carga la informacion  
   
 
+## Características
 
-Conocimientos en práctica: HTML,CSS,JavaScript,Sass
+- **Búsqueda por Nombre**: Encuentra recetas de bebidas ingresando el nombre de la bebida.
+- **Búsqueda por Ingredientes**: Busca bebidas disponibles con los ingredientes que tienes a mano.
+- **Detalles**: Cada receta incluye la imagen ingredientes e instrucciones  para la preparación.
+- **Editar**:te permite modificar la informacion del trago
+- **Editar**:el formulario te permite crear un trago con la informacion q tu desees
+- **Interfaz Intuitiva**: Diseño amigable y fácil de usar.
+
+
+## Tecnologías Utilizadas
+
+- **HTML5**
+- **CSS3**
+- **SASS**
+- **JavaScript**
+- **API de Bebidas**
+  
+
