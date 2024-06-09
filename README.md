@@ -31,7 +31,7 @@ Si quieres ver como quedó e interactuar con el  puedes dar click 💓[enlace](h
 - **Búsqueda por Ingredientes**: Busca bebidas disponibles con los ingredientes que tienes a mano.
 - **Detalles**: Cada receta incluye la imagen ingredientes e instrucciones  para la preparación.
 - **Editar**:te permite modificar la informacion del trago
-- **Editar**:el formulario te permite crear un trago con la informacion q tu desees
+- **nueva card**:el formulario te permite crear un trago con la informacion q tu desees
 - **Interfaz Intuitiva**: Diseño amigable y fácil de usar.
 
 
