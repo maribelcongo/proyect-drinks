@@ -4,6 +4,8 @@ const viewDetail = (id) => {
   const detailContainer = document.getElementById('detail-container');
   const container = document.getElementById('container');
 
+
+  
   fetch(`${baseUrl}/${id}`)
     .then((res) => {
       if (!res.ok) {
@@ -18,7 +20,7 @@ const viewDetail = (id) => {
       detailContainer.innerHTML = `
         <div class="detail-card">
           <div class="detail-card_all">
-            <button class="go_back_btn" onclick="goBack()">Ir Atrás</button>
+        <button class="go_back_btn" onclick="goBack()">Ir Atrás</button>
             <div class="detail-card_header">
               <img src="${image}" alt="${name}" class="detail-card_img" />
               <h2 class="detail-card_title">${name}</h2>
@@ -40,12 +42,14 @@ const viewDetail = (id) => {
                   <button class="cancelar" onclick="hideModal(${id})">Cancelar</button>
                   </div>
             </div>
-            <div id="editFormContainer"></div>
+            
           </div>
+          <div id="editFormContainer"></div>
         </div>
       `;
-      container.style.display = 'none'; // Ocultar el contenedor principal
+     container.style.display = 'none'; // Ocultar el contenedor principal
       detailContainer.style.display = 'block'; // Mostrar el contenedor de detalles
+     
     })
     .catch((err) => {
       console.error('Error fetching drink details:', err);
@@ -53,11 +57,13 @@ const viewDetail = (id) => {
     });
 };
 
-const goBack = () => {
+// ir atras 
+  const goBack = () => {
   const detailContainer = document.getElementById('detail-container');
   const container = document.getElementById('container');
   detailContainer.style.display = 'none'; // Ocultar el contenedor de detalles
-  container.style.display = 'block'; // Mostrar el contenedor principal
+  container.style.display = 'flex'; // Mostrar el contenedor principal
+  
 };
 
 
@@ -78,7 +84,8 @@ const editDetail = (id) => {
 
       const editFormContainer = document.getElementById('editFormContainer');
       editFormContainer.innerHTML = `
-        <h2>Editar coctel</h2>
+       <div class="editFormContainer">
+      <h2>Editar coctel</h2>
         <form id="editForm">
           <label for="editName">Nombre:</label>
           <input type="text" id="editName" name="editName" value="${name}" required>
@@ -98,6 +105,7 @@ const editDetail = (id) => {
           
           </div>
         </form>
+        </div>
       `;
 
       document.getElementById('editForm').addEventListener('submit', function (event) {

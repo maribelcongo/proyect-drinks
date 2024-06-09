@@ -37,6 +37,10 @@ button .btn-nav:hover {
   text-shadow: 1px 1px 2px #884273;
 }
 
+#backButton {
+  display: none;
+}
+
 .spinner-container {
   display: none;
 }
@@ -161,31 +165,31 @@ select {
   margin: 0em auto;
   display: none;
   padding: 60px 40px 40px;
-}
-
-#coctelForm {
-  display: flex;
-  flex-direction: column;
   width: 60%;
-  color: aliceblue;
-  box-shadow: 3px 3px 15px rgb(245, 6, 137);
-  padding: 8px;
-  margin: auto;
 }
 @media (max-width: 600px) {
-  #coctelForm {
+  #nuevaCoctelCard {
     width: 90%;
     max-width: 1000px;
     font-family: "Roboto Condensed", sans-serif;
   }
 }
 @media (max-width: 768px) {
-  #coctelForm {
+  #nuevaCoctelCard {
     width: 85%;
     max-width: 1100px;
     height: auto;
     font-family: "Roboto Condensed", sans-serif;
   }
+}
+
+#coctelForm {
+  display: flex;
+  flex-direction: column;
+  color: aliceblue;
+  box-shadow: 3px 3px 15px rgb(245, 6, 137);
+  padding: 8px;
+  margin: auto;
 }
 
 #nameInput {
@@ -215,6 +219,8 @@ select {
 #preparationInput {
   height: 9em;
   width: 100%;
+  background: #fff;
+  color: #070000;
 }
 
 .submit-btn {
@@ -227,6 +233,7 @@ select {
 .btn-new {
   display: flex;
   justify-content: center;
+  margin: 10px;
 }
 
 #cancelarBtn {
@@ -454,6 +461,18 @@ h2 {
   flex-direction: column;
   width: 40%;
   height: 150px;
+}
+@media (max-width: 600px) {
+  .modal-contenedor {
+    width: 80%;
+    text-align: center;
+  }
+}
+@media (max-width: 768px) {
+  .modal-contenedor {
+    width: 85%;
+    text-align: center;
+  }
 }
 
 .btn-modal {

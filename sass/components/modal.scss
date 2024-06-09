@@ -12,6 +12,15 @@
 	flex-direction: column;
 	width: 40%;
 	height: 150px;
+
+	@include respond-to(small) {
+		width: 80%;
+		text-align: center;
+	}
+	@include respond-to(medium) {
+		width: 85%;
+		text-align: center;
+	}
 }
 
 .btn-modal {

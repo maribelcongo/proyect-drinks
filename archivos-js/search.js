@@ -1,4 +1,5 @@
-// buscar por nombre
+
+
 function filterDrinks() {
     console.log("filterDrinks() called");
     const option = document.getElementById('option').value;
@@ -30,7 +31,7 @@ async function searchCocktail() {
             const data = await response.json();
             const drink = data.find(item => item.name.toLowerCase() === searchInput);
             if (drink) {
-                main.innerHTML = ''; // Clear previous results
+                main.innerHTML = ''; 
                 const card = createCard(drink);
                 main.appendChild(card);
             } else {
@@ -70,6 +71,11 @@ async function searchCocktail() {
     }
 }
 
+
+
+
+
+
 function createCard(drink) {
     const card = document.createElement('div');
     card.className = 'card';
@@ -100,6 +106,8 @@ function createCard(drink) {
 
     return card;
 }
+
+ 
 
 function clearSearch() {
     const searchInput = document.getElementById('searchInput');

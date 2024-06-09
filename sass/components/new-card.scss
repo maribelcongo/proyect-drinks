@@ -9,16 +9,7 @@
 	margin: 0em auto;
 	display: none;
 	padding: 60px 40px 40px;
-}
-
-#coctelForm {
-	display: flex;
-	flex-direction: column;
 	width: 60%;
-	color: aliceblue;
-	box-shadow: 3px 3px 15px rgb(245, 6, 137);
-	padding: 8px;
-	margin: auto;
 
 	@include respond-to(small) {
 		width: 90%;
@@ -31,6 +22,15 @@
 		height: auto;
 		font-family: $texto-break;
 	}
+}
+
+#coctelForm {
+	display: flex;
+	flex-direction: column;
+	color: aliceblue;
+	box-shadow: 3px 3px 15px rgb(245, 6, 137);
+	padding: 8px;
+	margin: auto;
 }
 
 #nameInput {
@@ -60,6 +60,8 @@
 #preparationInput {
 	height: 9em;
 	width: 100%;
+	background: #fff;
+	color: #070000;
 }
 
 .submit-btn {
@@ -71,6 +73,7 @@
 .btn-new {
 	display: flex;
 	justify-content: center;
+	margin: 10px;
 }
 #cancelarBtn {
 	height: 30px;
