@@ -1,38 +1,38 @@
 
 document.addEventListener('DOMContentLoaded', function() {
-    document.getElementById('toggleFormularioBtn').addEventListener('click', function() {
+   
+
+    toggleFormularioBtn.addEventListener('click', function() {
         let elementsToHide = document.querySelectorAll('main > *:not(#nuevaCoctelCard)');
         elementsToHide.forEach(function(element) {
             element.style.display = 'none';
         });
 
-        document.getElementById('nuevaCoctelCard').style.display = 'block';
+        nuevaCoctelCard.style.display = 'block';
     });
 
-    document.getElementById('cancelarBtn').addEventListener('click', function() {
+    cancelarBtn.addEventListener('click', function() {
         let elementsToShow = document.querySelectorAll('main > *:not(#nuevaCoctelCard)');
         elementsToShow.forEach(function(element) {
             element.style.display = 'block';
         });
 
-        document.getElementById('nuevaCoctelCard').style.display = 'none';
+        nuevaCoctelCard.style.display = 'none';
     });
 
-    document.getElementById('coctelForm').addEventListener('submit', function(event) {
+    coctelForm.addEventListener('submit', function(event) {
         event.preventDefault();
 
-        let nombre = document.getElementById('nameInput').value;
-        let preparacion = document.getElementById('preparationInput').value;
-        let imagen = document.getElementById('imageInput').value;
-        let alcohol = document.getElementById('alcoholInput').value;
-        let ingredientes = document.getElementById('ingredientsInput').value.split(',');
+        let name = document.getElementById('nameInput').value;
+        let preparation = document.getElementById('preparationInput').value;
+        let image = document.getElementById('imageInput').value;
+        let ingredients = document.getElementById('ingredientsInput').value.split(',');
 
         let nuevoCoctel = {
-            nombre: nombre,
-            preparacion: preparacion,
-            imagen: imagen,
-            alcohol: alcohol,
-            ingredientes: ingredientes
+            name: name,
+            preparation: preparation,
+            image: image,
+            ingredients: ingredients
         };
 
         fetch(baseUrl, {
@@ -50,9 +50,16 @@ document.addEventListener('DOMContentLoaded', function() {
         })
         .then(data => {
             console.log('Coctel creado exitosamente:', data);
+          
+         
+            
+            coctelForm.reset();
+
+            cancelarBtn.click();
         })
         .catch(error => {
             console.error('Error:', error);
         });
     });
-});
+
+})

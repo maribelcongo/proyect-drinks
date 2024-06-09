@@ -31,9 +31,14 @@ const viewDetail = (id) => {
               <h3 class="tex-pre">preparacion</h3>
               <p class="preparation">${preparation}</p>
               <div class="detail-card_actions">
-                <button class="edit_detail_btn" onclick="editDetail(${drink.id})">Editar</button>
-                <button class="delete_detail_btn" onclick="deleteDetail(${drink.id})">Eliminar</button>
-              </div>
+               <button class="edit_detail_btn" onclick="editDetail(${drink.id})">Editar</button>
+               <button class="delete_detail_btn" onclick="showModal(${id})">Eliminar</button>
+                <div class="modal-contenedor hidden" id="modal-${id}">
+                  <p>¿Estás seguro que deseas borrar esta card?</p>
+                  <div class="btn-modal">
+                  <button class="confirmar-eliminar" onclick="deleteDetail(${id})">Eliminar card</button>
+                  <button class="cancelar" onclick="hideModal(${id})">Cancelar</button>
+                  </div>
             </div>
             <div id="editFormContainer"></div>
           </div>
@@ -54,6 +59,9 @@ const goBack = () => {
   detailContainer.style.display = 'none'; // Ocultar el contenedor de detalles
   container.style.display = 'block'; // Mostrar el contenedor principal
 };
+
+
+
 
 // Función para editar detalles del trago
 const editDetail = (id) => {
