@@ -41,16 +41,18 @@
     <select id="option" title="d"   class="search-box" onchange="filterDrinks()">
         <option value="buscar">Buscar</option>
         <option value="name">Nombre</option>
-        <option value="alcoholic">Alcohol</option>
         <option value="ingredients">Ingredientes</option>
     </select>
 
-    <input type="text" id="searchInput" class="search-box" placeholder="Ingrese el nombre del cóctel"/>
+    <input type="text" id="searchInput" class="search-box" placeholder=" nombre del cóctel"/>
     <input type="text" id="searchIngredient" class="search-box" placeholder="Ingrese el ingrediente" />
-    
+   
+    <div class="btn-searchForm"> 
     <button type="button" class="search-btn" onclick="searchCocktail()">Buscar</button>
     <button type="button" class="clear-btn" onclick="clearSearch()">Borrar</button>
+   </div>
 </form>
+
 <!-- fin barra busquedad -->
 
 <div class="spinner hidden "id="spinner-container" ></div>

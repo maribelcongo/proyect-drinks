@@ -72,10 +72,14 @@ button .btn-nav:hover {
   justify-content: center;
   align-items: center;
 }
+@media (max-width: 600px) {
+  #searchForm {
+    justify-content: space-evenly;
+  }
+}
 
 .search-container {
   text-align: center;
-  margin-top: 50px;
 }
 
 select {
@@ -84,40 +88,49 @@ select {
   font-weight: 600;
   width: 30%;
   border-radius: 15px;
-  margin: 16px;
   padding: 8px;
+  margin: 10px;
+}
+
+.btn-searchForm {
+  display: flex;
+  margin: 10px;
+}
+@media (max-width: 600px) {
+  .btn-searchForm {
+    flex-direction: column;
+    margin: 10px;
+  }
+}
+@media (max-width: 600px) and (max-width: 768px) {
+  .btn-searchForm {
+    flex-direction: column;
+  }
 }
 
 .search-btn {
-  padding: 10px 20px;
+  padding: 10px;
   background-color: rgb(235, 15, 136);
   color: rgb(10, 10, 10);
   border: none;
   border-radius: 20px;
   cursor: pointer;
   transition: background-color 0.3s;
-  margin: 4px;
-  height: 37px;
+  margin: 2px;
   font-family: "Marcellus SC", serif;
   font-weight: 600;
 }
 
 .clear-btn {
-  padding: 10px 20px;
+  padding: 10px;
   color: rgb(8, 8, 8);
   border-radius: 20px;
   cursor: pointer;
-  margin: 4px;
-  height: 37px;
+  margin: 2px;
   border: none;
   font-family: "Marcellus SC", serif;
   font-weight: 500;
   background: rgb(240, 210, 240);
-  border: 1px solid white;
-  box-shadow: 0px 2px 0 white, 2px 4px 6px #eee;
-  letter-spacing: 1px;
-  -webkit-transition: all 150ms linear;
-  transition: all 150ms linear;
 }
 
 .clear-btn:hover {
@@ -134,7 +147,6 @@ select {
 .search-box {
   width: 25%;
   border-radius: 15px;
-  margin: 16px;
   padding: 8px;
 }
 

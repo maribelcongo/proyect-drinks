@@ -14,10 +14,11 @@ document.addEventListener('DOMContentLoaded', function() {
     cancelarBtn.addEventListener('click', function() {
         let elementsToShow = document.querySelectorAll('main > *:not(#nuevaCoctelCard)');
         elementsToShow.forEach(function(element) {
-            element.style.display = 'block';
+            element.style.display = 'flex';
         });
 
         nuevaCoctelCard.style.display = 'none';
+     
     });
 
     coctelForm.addEventListener('submit', function(event) {
