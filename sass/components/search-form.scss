@@ -6,18 +6,26 @@
 	display: flex;
 	justify-content:center;
 	align-items: center;
-	
-@include respond-to(small) {
-	
-   
-    justify-content: space-evenly;
 
+@include respond-to(small) {
+	width: 100%;
+	margin:auto;
+	
 }
+@include respond-to(medium) {
+	width: 100%;
+	margin:auto;
+	
+}
+
 }
 .search-container {
 	text-align: center;
 	
 }
+
+
+
 
 select {
 	border-color: $color-primary;

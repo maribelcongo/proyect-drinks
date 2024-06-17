@@ -74,7 +74,14 @@ button .btn-nav:hover {
 }
 @media (max-width: 600px) {
   #searchForm {
-    justify-content: space-evenly;
+    width: 100%;
+    margin: auto;
+  }
+}
+@media (max-width: 768px) {
+  #searchForm {
+    width: 100%;
+    margin: auto;
   }
 }
 
