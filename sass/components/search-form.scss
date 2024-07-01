@@ -4,28 +4,16 @@
 
 #searchForm {
 	display: flex;
-	justify-content:center;
+	justify-content: center;
 	align-items: center;
 
-@include respond-to(small) {
-	width: 100%;
-	margin:auto;
-	
-}
-@include respond-to(medium) {
-	width: 100%;
-	margin:auto;
-	
-}
-
+	@include respond-to(medium) {
+		width: 95%;
+	}
 }
 .search-container {
 	text-align: center;
-	
 }
-
-
-
 
 select {
 	border-color: $color-primary;
@@ -33,21 +21,20 @@ select {
 	font-weight: 600;
 	width: 30%;
 	border-radius: 15px;
-    padding: 8px;
-	margin:10px
+	padding: 8px;
+	margin: 10px;
 }
-.btn-searchForm{
-	
-    display: flex;
-	margin:10px;
-  
+.btn-searchForm {
+	display: flex;
+	margin: 10px;
+
 	@include respond-to(small) {
-		 flex-direction:column;
-		 margin:10px;
-	@include respond-to(medium) {
-	flex-direction:column;
+		width: 60px;
+		margin: 4px;
+		@include respond-to(medium) {
+			width: 60px;
+		}
 	}
-}
 }
 .search-btn {
 	padding: 10px;
@@ -68,12 +55,20 @@ select {
 	border-radius: 20px;
 	cursor: pointer;
 	margin: 2px;
-	border:none;
-    font-family: "Marcellus SC", serif;
+	border: none;
+	font-family: "Marcellus SC", serif;
 	font-weight: 500;
 	background: rgb(240, 210, 240);
-	
+
+	@include respond-to(small) {
+		width: 55px;
+		margin: 4px;
+		@include respond-to(medium) {
+			width: 60px;
+		}
+	}
 }
+
 .clear-btn:hover {
 	background: #eebeea;
 	border: 1px solid rgba(0, 0, 0, 0.05);
@@ -89,6 +84,14 @@ select {
 	width: 25%;
 	border-radius: 15px;
 	padding: 8px;
+
+	@include respond-to(small) {
+		width: 35%;
+
+		@include respond-to(medium) {
+			width: 25%;
+		}
+	}
 }
 
 .search-check {
@@ -106,4 +109,3 @@ select {
 	display: none;
 }
 // --------------------------------------------------
-

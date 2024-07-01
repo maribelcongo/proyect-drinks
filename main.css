@@ -72,16 +72,9 @@ button .btn-nav:hover {
   justify-content: center;
   align-items: center;
 }
-@media (max-width: 600px) {
-  #searchForm {
-    width: 100%;
-    margin: auto;
-  }
-}
 @media (max-width: 768px) {
   #searchForm {
-    width: 100%;
-    margin: auto;
+    width: 95%;
   }
 }
 
@@ -105,13 +98,13 @@ select {
 }
 @media (max-width: 600px) {
   .btn-searchForm {
-    flex-direction: column;
-    margin: 10px;
+    width: 60px;
+    margin: 4px;
   }
 }
 @media (max-width: 600px) and (max-width: 768px) {
   .btn-searchForm {
-    flex-direction: column;
+    width: 60px;
   }
 }
 
@@ -139,6 +132,17 @@ select {
   font-weight: 500;
   background: rgb(240, 210, 240);
 }
+@media (max-width: 600px) {
+  .clear-btn {
+    width: 55px;
+    margin: 4px;
+  }
+}
+@media (max-width: 600px) and (max-width: 768px) {
+  .clear-btn {
+    width: 60px;
+  }
+}
 
 .clear-btn:hover {
   background: #eebeea;
@@ -155,6 +159,16 @@ select {
   width: 25%;
   border-radius: 15px;
   padding: 8px;
+}
+@media (max-width: 600px) {
+  .search-box {
+    width: 35%;
+  }
+}
+@media (max-width: 600px) and (max-width: 768px) {
+  .search-box {
+    width: 25%;
+  }
 }
 
 .search-check {
