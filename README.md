@@ -39,7 +39,6 @@ Si quieres ver como quedó e interactuar con el  puedes dar click 💓[enlace](h
 ## Tecnologías Utilizadas
 
 - **HTML5**
-- **CSS3**
 - **SASS**
 - **JavaScript**
 - **API de Bebidas**
