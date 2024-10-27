@@ -1,111 +1,111 @@
 #searchInput {
-	display: none;
+  display: none;
 }
 
 #searchForm {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-
-	@include respond-to(medium) {
-		width: 95%;
-	}
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 15px;
+  @include respond-to(medium) {
+    width: 95%;
+  }
 }
 .search-container {
-	text-align: center;
+  text-align: center;
 }
 
 select {
-	border-color: $color-primary;
-	font-family: $texto-secundary;
-	font-weight: 600;
-	width: 30%;
-	border-radius: 15px;
-	padding: 8px;
-	margin: 10px;
+  border-color: $color-primary;
+  font-family: $texto-secundary;
+  font-weight: 600;
+  width: 30%;
+  border-radius: 15px;
+  padding: 8px;
+  margin: 10px;
 }
 .btn-searchForm {
-	display: flex;
-	margin: 10px;
+  display: flex;
+  margin: 10px;
 
-	@include respond-to(small) {
-		width: 60px;
-		margin: 4px;
-		@include respond-to(medium) {
-			width: 60px;
-		}
-	}
+  @include respond-to(small) {
+    width: 60px;
+    margin: 4px;
+    @include respond-to(medium) {
+      width: 60px;
+    }
+  }
 }
 .search-btn {
-	padding: 10px;
-	background-color: $color-primary;
-	color: rgb(10, 10, 10);
-	border: none;
-	border-radius: 20px;
-	cursor: pointer;
-	transition: background-color 0.3s;
-	margin: 2px;
-	font-family: "Marcellus SC", serif;
-	font-weight: 600;
+  padding: 10px;
+  background-color: $color-primary;
+  color: rgb(10, 10, 10);
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin: 2px;
+  font-family: "Marcellus SC", serif;
+  font-weight: 600;
 }
 
 .clear-btn {
-	padding: 10px;
-	color: rgb(8, 8, 8);
-	border-radius: 20px;
-	cursor: pointer;
-	margin: 2px;
-	border: none;
-	font-family: "Marcellus SC", serif;
-	font-weight: 500;
-	background: rgb(240, 210, 240);
+  padding: 10px;
+  color: rgb(8, 8, 8);
+  border-radius: 20px;
+  cursor: pointer;
+  margin: 2px;
+  border: none;
+  font-family: "Marcellus SC", serif;
+  font-weight: 500;
+  background: rgb(240, 210, 240);
 
-	@include respond-to(small) {
-		width: 55px;
-		margin: 4px;
-		@include respond-to(medium) {
-			width: 60px;
-		}
-	}
+  @include respond-to(small) {
+    width: 55px;
+    margin: 4px;
+    @include respond-to(medium) {
+      width: 60px;
+    }
+  }
 }
 
 .clear-btn:hover {
-	background: #eebeea;
-	border: 1px solid rgba(0, 0, 0, 0.05);
-	box-shadow: 1px 1px 2px rgba(255, 255, 255, 0.2);
-	color: #f80858;
-	text-decoration: none;
-	text-shadow: -1px -1px 0 #6b4f74;
-	-webkit-transition: all 250ms linear;
-	transition: all 250ms linear;
+  background: #eebeea;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  box-shadow: 1px 1px 2px rgba(255, 255, 255, 0.2);
+  color: #f80858;
+  text-decoration: none;
+  text-shadow: -1px -1px 0 #6b4f74;
+  -webkit-transition: all 250ms linear;
+  transition: all 250ms linear;
 }
 
 .search-box {
-	width: 25%;
-	border-radius: 15px;
-	padding: 8px;
+  width: 25%;
+  border-radius: 15px;
+  padding: 8px;
 
-	@include respond-to(small) {
-		width: 35%;
+  @include respond-to(small) {
+    width: 35%;
 
-		@include respond-to(medium) {
-			width: 25%;
-		}
-	}
+    @include respond-to(medium) {
+      width: 25%;
+    }
+  }
 }
 
 .search-check {
-	width: 150px;
-	background: white;
-	border-radius: 6px;
-	padding: 8px;
-	margin: 5px;
+  width: 150px;
+  background: white;
+  border-radius: 6px;
+  padding: 8px;
+  margin: 5px;
 }
 
 .search-alcoholic {
-	margin: 15px;
+  margin: 15px;
 }
 .hidden {
-	display: none;
+  display: none;
 }
 // --------------------------------------------------

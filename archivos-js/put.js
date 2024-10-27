@@ -1,11 +1,8 @@
-
 // Función para ver detalles e ir atrás
 const viewDetail = (id) => {
-  const detailContainer = document.getElementById('detail-container');
-  const container = document.getElementById('container');
+  const detailContainer = document.getElementById("detail-container");
+  const container = document.getElementById("container");
 
-
-  
   fetch(`${baseUrl}/${id}`)
     .then((res) => {
       if (!res.ok) {
@@ -15,7 +12,9 @@ const viewDetail = (id) => {
     })
     .then((drink) => {
       const { name, image, ingredients, preparation } = drink;
-      const ingredientsList = Array.isArray(ingredients) ? ingredients.join(', ') : 'N/A';
+      const ingredientsList = Array.isArray(ingredients)
+        ? ingredients.join(", ")
+        : "N/A";
 
       detailContainer.innerHTML = `
         <div class="detail-card">
@@ -47,42 +46,39 @@ const viewDetail = (id) => {
           <div id="editFormContainer"></div>
         </div>
       `;
-     container.style.display = 'none'; // Ocultar el contenedor principal
-      detailContainer.style.display = 'block'; // Mostrar el contenedor de detalles
-     
+      container.style.display = "none";
+      detailContainer.style.display = "block";
     })
     .catch((err) => {
-      console.error('Error fetching drink details:', err);
-      alert('Error fetching drink details. Please try again later.');
+      console.error("Error fetching drink details:", err);
+      alert("Error fetching drink details. Please try again later.");
     });
 };
 
-// ir atras 
-  const goBack = () => {
-  const detailContainer = document.getElementById('detail-container');
-  const container = document.getElementById('container');
-  detailContainer.style.display = 'none'; // Ocultar el contenedor de detalles
-  container.style.display = 'flex'; // Mostrar el contenedor principal
-  
+// ir atras
+const goBack = () => {
+  const detailContainer = document.getElementById("detail-container");
+  const container = document.getElementById("container");
+  detailContainer.style.display = "none";
+  container.style.display = "flex";
 };
-
-
-
 
 // Función para editar detalles del trago
 const editDetail = (id) => {
   fetch(`${baseUrl}/${id}`)
-    .then(response => {
+    .then((response) => {
       if (!response.ok) {
-        throw new Error('Error al obtener detalles del trago');
+        throw new Error("Error al obtener detalles del trago");
       }
       return response.json();
     })
-    .then(data => {
+    .then((data) => {
       const { name, image, preparation, ingredients } = data;
-      const ingredientsList = Array.isArray(ingredients) ? ingredients.join(', ') : '';
+      const ingredientsList = Array.isArray(ingredients)
+        ? ingredients.join(", ")
+        : "";
 
-      const editFormContainer = document.getElementById('editFormContainer');
+      const editFormContainer = document.getElementById("editFormContainer");
       editFormContainer.innerHTML = `
        <div class="editFormContainer">
       <h2>Editar coctel</h2>
@@ -108,45 +104,54 @@ const editDetail = (id) => {
         </div>
       `;
 
-      document.getElementById('editForm').addEventListener('submit', function (event) {
-        event.preventDefault(); // Evitar que el formulario se envíe automáticamente
+      document
+        .getElementById("editForm")
+        .addEventListener("submit", function (event) {
+          event.preventDefault(); // Evitar que el formulario se envíe automáticamente
 
-        const updatedName = document.getElementById('editName').value;
-        const updatedImage = document.getElementById('editImage').value;
-        const updatedPreparation = document.getElementById('editPreparation').value;
-        const updatedIngredients = document.getElementById('editIngredients').value.split(',').map(ingredient => ingredient.trim());
+          const updatedName = document.getElementById("editName").value;
+          const updatedImage = document.getElementById("editImage").value;
+          const updatedPreparation =
+            document.getElementById("editPreparation").value;
+          const updatedIngredients = document
+            .getElementById("editIngredients")
+            .value.split(",")
+            .map((ingredient) => ingredient.trim());
 
-        const updatedDetail = {
-          name: updatedName,
-          image: updatedImage,
-          preparation: updatedPreparation,
-          ingredients: updatedIngredients
-        };
+          const updatedDetail = {
+            name: updatedName,
+            image: updatedImage,
+            preparation: updatedPreparation,
+            ingredients: updatedIngredients,
+          };
 
-        // Enviar los datos actualizados a la API utilizando el método PUT
-        fetch(`${baseUrl}/${id}`, {
-          method: 'PUT',
-          headers: {
-            'Content-Type': 'application/json'
-          },
-          body: JSON.stringify(updatedDetail)
-        })
-          .then(response => {
-            if (!response.ok) {
-              throw new Error('Error al actualizar los detalles del trago');
-            }
-
-            alert('Detalles del trago actualizados exitosamente');
-            viewDetail(id); // Mostrar los detalles actualizados
+          // Enviar los datos actualizados a la API utilizando el método PUT
+          fetch(`${baseUrl}/${id}`, {
+            method: "PUT",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify(updatedDetail),
           })
-          .catch(error => {
-            console.error('Error al actualizar los detalles del trago:', error);
-            alert('Error al actualizar los detalles del trago');
-          });
-      });
+            .then((response) => {
+              if (!response.ok) {
+                throw new Error("Error al actualizar los detalles del trago");
+              }
+
+              alert("Detalles del trago actualizados exitosamente");
+              viewDetail(id); // Mostrar los detalles actualizados
+            })
+            .catch((error) => {
+              console.error(
+                "Error al actualizar los detalles del trago:",
+                error
+              );
+              alert("Error al actualizar los detalles del trago");
+            });
+        });
     })
-    .catch(error => {
-      console.error('Error al obtener detalles del trago:', error);
-      alert('Error al obtener detalles del trago');
+    .catch((error) => {
+      console.error("Error al obtener detalles del trago:", error);
+      alert("Error al obtener detalles del trago");
     });
 };

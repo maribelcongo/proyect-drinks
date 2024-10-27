@@ -1,114 +1,137 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Drinks&Drinks</title>
-   <link rel="stylesheet" href="main.css">
-    
-    
-</head>
+    <link rel="stylesheet" href="main.css" />
+  </head>
 
-
-
-
-<body>
-
-<header> 
-
-    <nav>
+  <body>
+    <header>
+      <nav>
         <div class="nav-data">
-            <h1>drinks</h1>
-            <h2>¡animate a explorar!</h2>
+          <h1>drinks</h1>
+          <h2>¡animate a explorar!</h2>
         </div>
 
-        <div class="btn-create"> 
-               <button id="toggleFormularioBtn" class="btn-nav">crea tu coctel</button>
+        <div class="btn-create">
+          <button id="toggleFormularioBtn" class="btn-nav">
+            crea tu coctel
+          </button>
         </div>
-          
-    
-    </nav>
-</header>
- <!-- ---------------------------------------------------------------------------- -->
+      </nav>
+    </header>
+    <!-- ---------------------------------------------------------------------------- -->
 
-<main class="main-container"  id="main" >
-  
+    <main class="main-container" id="main">
+      <!-- formulario barra busqueda -->
 
+      <form id="searchForm">
+        <select id="option" class="search-box" onchange="filterDrinks()">
+          <option value="buscar">Buscar</option>
+          <option value="name">Nombre</option>
+          <option value="ingredients">Ingredientes</option>
+        </select>
 
-<!-- formulario barra busqueda -->
+        <input
+          type="text"
+          id="searchInput"
+          class="search-box"
+          placeholder="Nombre del cóctel"
+          style="display: none"
+        />
+        <input
+          type="text"
+          id="searchIngredient"
+          class="search-box"
+          placeholder="Ingrese el ingrediente"
+          style="display: none"
+        />
 
-<form id="searchForm">
-    <select id="option" title="d"   class="search-box" onchange="filterDrinks()"> 
-        <option value="buscar">Buscar</option>
-        <option value="name">Nombre</option>
-        <option value="ingredients">Ingredientes</option>
-    </select>
-
-    <input type="text" id="searchInput" class="search-box" placeholder=" nombre del cóctel"/>
-    <input type="text" id="searchIngredient" class="search-box" placeholder="Ingrese el ingrediente" />
-   
-    <div class="btn-searchForm"> 
-    <button type="button" class="search-btn" onclick="searchCocktail()">Buscar</button>
-    <button type="button" class="clear-btn" onclick="clearSearch()">Borrar</button>
-   </div>
-</form>
-
-<!-- fin barra busquedad -->
-
-<div class="spinner hidden "id="spinner-container" ></div>
-
-
-        <!-- formulario crear nuevo coctel -->
-     
-        <div id="nuevaCoctelCard" class="coctel-card oculto">
-            <form id="coctelForm">
-                <label for="nameInput">Nombre:</label>
-                <input type="text" id="nameInput" name="nameInput" required>
-
-                <label for="preparationInput">Preparación:</label>
-                <textarea id="preparationInput" name="preparationInput" required></textarea>
-
-                <label for="imageInput">URL de la imagen:</label>
-                <input type="text" id="imageInput" name="imageInput" required>
-
-                <label for="alcoholInput">alcohol:</label>
-                <input type="text" id="alcoholInput" name="alcoholInput" required>
-
-                <label for="ingredientsInput">Ingredientes (separados por coma):</label>
-                <input type="text" id="ingredientsInput" name="ingredientsInput" required>
-               <div class="btn-new">
-                <button type="submit" class="submit-btn">Enviar</button>
-                <button type="button" id="cancelarBtn">Cancelar</button>
-               </div>
-            </form>
+        <div class="btn-searchForm">
+          <button type="button" class="search-btn" onclick="searchCocktail()">
+            Buscar
+          </button>
+          <button type="button" class="clear-btn" onclick="clearSearch()">
+            Borrar
+          </button>
+          <button
+            type="button"
+            class="back-btn"
+            id="backBtn"
+            style="display: none"
+            onclick="goBackToHome()"
+          >
+            Volver
+          </button>
+          <!-- Oculta el botón al inicio -->
         </div>
-        <!-- --------------------------------------------------------------- -->
-         <div id="result" ></div>
-         <div id="container"></div>
-        <div id="detail-container"> </div>
-         <div id="detalleContainer"></div>
+      </form>
+
+      <!--fin barra busquedad-->
+
+      <!-- spinner -->
+      <div class="loader_box" id="loader">
+        <span class="loader"></span>
+      </div>
+
+      <!-- formulario crear nuevo coctel -->
+
+      <div id="nuevaCoctelCard" class="coctel-card oculto">
+        <button id="backButton" onclick="goBack()" style="display: none">
+          Ir Atrás
+        </button>
+
+        <form id="coctelForm">
+          <label for="nameInput">Nombre:</label>
+          <input type="text" id="nameInput" name="nameInput" required />
+
+          <label for="preparationInput">Preparación:</label>
+          <textarea
+            id="preparationInput"
+            name="preparationInput"
+            required
+          ></textarea>
+
+          <label for="imageInput">URL de la imagen:</label>
+          <input type="text" id="imageInput" name="imageInput" required />
+
+          <label for="alcoholInput">alcohol:</label>
+          <input type="text" id="alcoholInput" name="alcoholInput" required />
+
+          <label for="ingredientsInput"
+            >Ingredientes (separados por coma):</label
+          >
+          <input
+            type="text"
+            id="ingredientsInput"
+            name="ingredientsInput"
+            required
+          />
+          <div class="btn-new">
+            <button type="submit" class="submit-btn">Enviar</button>
+            <button type="button" id="cancelarBtn">Cancelar</button>
+          </div>
+        </form>
+      </div>
+      <!---------------------------------------------------------------->
+
+      <div id="result"></div>
+      <div id="container"></div>
+      <div id="detail-container"></div>
+      <div id="detalleContainer"></div>
       <div id="cocktailContainer"></div>
-
-
-
-     
-
-
-               
-</main>
-
+    </main>
 
     <footer>
-         <p class="tex-footer">  hecho con &#128147; por maribel</p>
+      <p class="tex-footer">hecho con &#128147; por maribel</p>
     </footer>
 
-
-    <script src="archivos-js/get.js"></script> 
-   <script src="archivos-js/post.js"></script> 
-   <script src="archivos-js/put.js"></script>
-   <script src="archivos-js/delete.js"></script>
-   <script src="archivos-js/search.js"></script>
-
-
-</body>
+    <script src="archivos-js/get.js"></script>
+    <script src="archivos-js/post.js"></script>
+    <script src="archivos-js/put.js"></script>
+    <script src="archivos-js/delete.js"></script>
+    <script src="archivos-js/search.js"></script>
+  </body>
 </html>
