@@ -22,12 +22,20 @@ function searchCocktail() {
     fetchUrl += `?${option}=${encodeURIComponent(searchValue)}`;
   }
 
-  // Llama a la función getDrinks con la URL actualizada
-  getDrinks(fetchUrl);
-
-  // Muestra el botón "Volver" al realizar la búsqueda
-  document.getElementById("backBtn").style.display = "block";
+  // Llama a la función getDrinks con la URL actualizada y muestra el botón "Volver"
+  getDrinks(fetchUrl, true);
 }
+
+function goBackToHome() {
+  getDrinks(baseUrl, false);
+  document.getElementById("searchInput").value = "";
+  document.getElementById("searchIngredient").value = "";
+  document.getElementById("option").value = "buscar";
+  filterDrinks();
+
+  // El botón "Volver" se oculta automáticamente dentro de getDrinks
+}
+
 function clearSearch() {
   const searchInput = document.getElementById("searchInput");
   const searchIngredient = document.getElementById("searchIngredient");
@@ -48,15 +56,4 @@ function clearSearch() {
     searchInput.style.display = "none";
     searchIngredient.style.display = "none";
   }
-}
-
-function goBackToHome() {
-  getDrinks(baseUrl);
-  document.getElementById("searchInput").value = "";
-  document.getElementById("searchIngredient").value = "";
-  document.getElementById("option").value = "buscar";
-  filterDrinks();
-
-  // Oculta el botón "Volver" nuevamente
-  document.getElementById("backBtn").style.display = "none";
 }

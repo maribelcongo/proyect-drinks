@@ -6,9 +6,12 @@ const coctelContainer = document.getElementById("coctelContainer");
 const loader = document.getElementById("loader");
 
 // Función get para traer los elementos y mostrarlos
-const getDrinks = (fetchUrl) => {
+const getDrinks = (fetchUrl, showBackBtn = false) => {
   loader.style.display = "block";
   container.style.display = "none";
+
+  // Oculta el botón "Volver" al comenzar la búsqueda
+  document.getElementById("backBtn").style.display = "none";
 
   fetch(fetchUrl)
     .then((res) => {
@@ -20,22 +23,32 @@ const getDrinks = (fetchUrl) => {
     .then((data) => {
       container.innerHTML = ""; // Limpiar el contenedor
 
-      data.forEach((drink) => {
-        const { id, name, image } = drink;
-        container.innerHTML += `
-          <div class="card">
-            <img
-              src="${image}"
-              alt="${name}"
-              class="card_img"
-            />
-            <div class="card_text_container">
-              <h2 class="card_title">${name}</h2>
-              <button class="view_detail_btn" data-cardid="${id}" onclick="viewDetail(${id})">Ver Detalle</button>
+      if (data.length === 0) {
+        // No se encontraron resultados, no se muestra el botón
+        document.getElementById("backBtn").style.display = "none";
+      } else {
+        // Mostrar los resultados
+        data.forEach((drink) => {
+          const { id, name, image } = drink;
+          container.innerHTML += `
+            <div class="card">
+              <img
+                src="${image}"
+                alt="${name}"
+                class="card_img"
+              />
+              <div class="card_text_container">
+                <h2 class="card_title">${name}</h2>
+                <button class="view_detail_btn" data-cardid="${id}" onclick="viewDetail(${id})">Ver Detalle</button>
+              </div>
             </div>
-          </div>
-        `;
-      });
+          `;
+        });
+        // Mostrar el botón "Volver" si se solicita
+        if (showBackBtn) {
+          document.getElementById("backBtn").style.display = "block";
+        }
+      }
     })
     .catch((err) => {
       console.error("Error fetching drinks:", err);

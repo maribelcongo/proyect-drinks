@@ -1,9 +1,9 @@
 .card {
   border-radius: 8px;
-  margin: 10px;
+  margin: 20px;
   padding: 10px;
   display: inline-block;
-  width: calc(30% - 20px);
+  width: calc(30% - 30px);
   text-align: center;
   background: #f8f8f8;
   box-shadow: 3px 3px 15px rgb(245, 6, 137);
@@ -46,7 +46,6 @@
 }
 
 #container {
-  margin-top: 40px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;

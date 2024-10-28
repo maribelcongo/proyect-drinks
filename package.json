@@ -1,5 +1,9 @@
 {
   "devDependencies": {
-    "hint": "^7.1.11"
+    "hint": "^7.1.11",
+    "sass": "^1.53.0"
+  },
+  "scripts": {
+    "build-css": "sass --watch sass/main.scss main.css --verbose"
   }
 }

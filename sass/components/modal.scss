@@ -1,62 +1,92 @@
 .modal-contenedor {
-	position: fixed;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	background-color: #fcf3f3;
-	cursor: pointer;
-	border-radius: 8px;
-	color: #080808;
-	display: flex;
-	justify-content: center;
-	flex-direction: column;
-	width: 40%;
-	height: 150px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fcf3f3;
+  cursor: pointer;
+  border-radius: 8px;
+  color: #080808;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 40%;
+  height: 150px;
 
-	@include respond-to(small) {
-		width: 80%;
-		text-align: center;
-	}
-	@include respond-to(medium) {
-		width: 85%;
-		text-align: center;
-	}
+  @include respond-to(small) {
+    width: 80%;
+    text-align: center;
+  }
+  @include respond-to(medium) {
+    width: 85%;
+    text-align: center;
+  }
 }
 
 .btn-modal {
-	display: flex;
-	justify-content: center;
-	margin: 5px;
+  display: flex;
+  justify-content: center;
+  margin: 5px;
 }
 p {
-	margin: auto;
+  margin: auto;
 }
 
 .confirmar-eliminar {
-	height: 30px;
-	width: 100px;
-	border-radius: 20px;
-	cursor: pointer;
+  height: 30px;
+  width: 100px;
+  border-radius: 20px;
+  cursor: pointer;
 }
 
 .confirmar-eliminar:hover {
-	border: 1px solid;
-	box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.5),
-		0 0 20px rgba(255, 255, 255, 0.2);
-	outline-offset: 15px;
-	outline-color: rgba(245, 43, 43, 0);
-	text-shadow: 1px 1px 2px #f72cba;
+  border: 1px solid;
+  box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.5),
+    0 0 20px rgba(255, 255, 255, 0.2);
+  outline-offset: 15px;
+  outline-color: rgba(245, 43, 43, 0);
+  text-shadow: 1px 1px 2px #f72cba;
 }
 
 .cancelar {
-	height: 30px;
-	width: 100px;
-	border-radius: 20px;
-	background-color: $color-primary;
-	border: none;
-	cursor: pointer;
+  height: 30px;
+  width: 100px;
+  border-radius: 20px;
+  background-color: $color-primary;
+  border: none;
+  cursor: pointer;
 }
 
 .hidden {
-	display: none;
+  display: none;
+}
+
+// modal del get
+.modal_content {
+  top: 0;
+  left: 0;
+  width: 30%;
+  height: 30%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  background-color: aliceblue;
+}
+
+.modal_content p {
+  margin: 0 0 20px;
+}
+
+#cerrarModalBtn {
+  padding: 10px 15px;
+  background-color: #f72cba;
+  color: rgb(7, 7, 7);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#cerrarModalBtn:hover {
+  background-color: #f0a7d7;
 }
