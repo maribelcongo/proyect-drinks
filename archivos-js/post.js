@@ -17,21 +17,19 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   cancelarBtn.addEventListener("click", function () {
-    loader.style.display = "block"; // Mostrar el spinner
-    let elementsToShow = document.querySelectorAll(
-      "main > *:not(#nuevaCoctelCard)"
-    );
-    elementsToShow.forEach(function (element) {
-      element.style.display = "flex";
+    // Ocultar todo el contenido excepto el loader
+    let allElements = document.querySelectorAll("main > *");
+    allElements.forEach(function (element) {
+      element.style.display = "none"; // Ocultar todos los elementos
     });
 
-    nuevaCoctelCard.style.display = "none";
-    getDrinks(baseUrl); // Volver a cargar los cócteles
+    loader.style.display = "block"; // Mostrar el spinner
 
+    // Simular un retraso antes de redirigir a la página principal
     setTimeout(() => {
       loader.style.display = "none";
-      document.getElementById("searchForm").style.display = "flex";
-    }, 1000);
+      window.location.href = "/"; // Redirigir a la página principal
+    }, 1000); // 1 segundo de retraso
   });
 
   coctelForm.addEventListener("submit", function (event) {

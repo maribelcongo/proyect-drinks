@@ -1,111 +1,120 @@
 #detail-container {
-	display: none;
+  display: none;
 }
 
 .detail-card {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
-	margin: 0em auto;
-	font-family: $texto-secundary;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0em auto;
+  font-family: $texto-secundary;
 }
 
 .detail-card_all {
-	display: flex;
-	flex-direction: column;
-	width: 50%;
-	color: aliceblue;
-	box-shadow: 3px 3px 15px rgb(245, 6, 137);
-	padding: 8px;
-	margin: 15px;
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  color: aliceblue;
+  box-shadow: 3px 3px 15px rgb(245, 6, 137);
+  padding: 8px;
+  margin: 15px;
 
-	@include respond-to(small) {
-		width: 80%;
-		max-width: 1100px;
-	}
-	@include respond-to(medium) {
-		width: 85%;
-		max-width: 1100px;
-	}
+  @include respond-to(small) {
+    width: 80%;
+    max-width: 1100px;
+  }
+  @include respond-to(medium) {
+    width: 85%;
+    max-width: 1100px;
+  }
 }
 
 .detail-card_header {
-	display: flex;
-	margin: auto;
-	align-items: center;
-	flex-direction: column;
+  display: flex;
+  margin: auto;
+  align-items: center;
+  flex-direction: column;
 }
 
 .detail-card_img {
-	width: 200px;
-	height: 200px;
-	border: 1px solid rgb(230, 24, 168);
-	border-radius: 20px;
+  width: 200px;
+  height: 200px;
+  border: 1px solid rgb(230, 24, 168);
+  border-radius: 20px;
 }
 
 .detail-card_title {
-	color: $color-primary;
+  color: $color-primary;
 }
 
 .ingredients {
-	height: 4em;
-	width: 100%;
-	border: 1px solid rgb(248, 133, 214);
-	border-radius: 8px;
-	margin-bottom: 7px;
-	padding: 9px;
+  height: 4em;
+  width: 100%;
+  border: 1px solid rgb(248, 133, 214);
+  border-radius: 8px;
+  margin-bottom: 7px;
+  padding: 9px;
 }
 
 .preparation {
-	height: auto;
-	width: 100%;
-	border: 1px solid rgb(248, 133, 214);
-	border-radius: 8px;
-	margin-bottom: 7px;
-	padding: 9px;
+  height: auto;
+  width: 100%;
+  border: 1px solid rgb(248, 133, 214);
+  border-radius: 8px;
+  margin-bottom: 7px;
+  padding: 9px;
 }
 
 .tex-ing {
-	color: $color-primary;
+  color: $color-primary;
 }
 
 .tex-pre {
-	color: $color-primary;
+  color: $color-primary;
 }
 
 .detail-card_actions {
-	display: flex;
-	justify-content: center;
-	height: 30px;
+  display: flex;
+  justify-content: center;
+  height: 30px;
+  gap: 20px;
 }
 
 .edit_detail_btn {
-	height: 30px;
-	width: 100px;
-	border-radius: 20px;
-	background-color: $color-primary;
-	border: none;
-	cursor: pointer;
+  height: 30px;
+  width: 100px;
+  border-radius: 20px;
+  background-color: $color-primary;
+  border: none;
+  cursor: pointer;
 }
 
 .delete_detail_btn {
-	height: 30px;
-	width: 100px;
-	border-radius: 20px;
-	cursor: pointer;
+  height: 30px;
+  width: 100px;
+  border-radius: 20px;
+  cursor: pointer;
 }
 
 .delete_detail_btn:hover {
-	border: 1px solid;
-	box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.5),
-		0 0 20px rgba(255, 255, 255, 0.2);
-	outline-offset: 15px;
-	outline-color: rgba(245, 43, 43, 0);
-	text-shadow: 1px 1px 2px #f72cba;
+  border: 1px solid;
+  box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.5),
+    0 0 20px rgba(255, 255, 255, 0.2);
+  outline-offset: 15px;
+  outline-color: rgba(245, 43, 43, 0);
+  text-shadow: 1px 1px 2px #f72cba;
 }
 
 .go_back_btn {
-	width: 100px;
-	background: $color-btn;
-	border: none;
+  width: 100px;
+  background: $color-btn;
+  border: none;
+  padding: 10px;
+  color: rgb(8, 8, 8);
+  border-radius: 20px;
+  cursor: pointer;
+  margin: 2px;
+
+  font-family: "Marcellus SC", serif;
+  font-weight: 500;
 }

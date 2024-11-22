@@ -7,12 +7,11 @@
   padding: 0;
 }
 
-html {
-  height: 100%;
-}
-
 body {
-  height: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
   font-size: 1em;
   text-transform: capitalize;
   background-color: #0a0a0a;
@@ -506,6 +505,7 @@ button .btn-nav:hover {
   display: flex;
   justify-content: center;
   height: 30px;
+  gap: 20px;
 }
 
 .edit_detail_btn {
@@ -536,6 +536,13 @@ button .btn-nav:hover {
   width: 100px;
   background: rgb(242, 119, 247);
   border: none;
+  padding: 10px;
+  color: rgb(8, 8, 8);
+  border-radius: 20px;
+  cursor: pointer;
+  margin: 2px;
+  font-family: "Marcellus SC", serif;
+  font-weight: 500;
 }
 
 #editForm {
@@ -619,12 +626,10 @@ h2 {
 }
 
 footer {
-  position: relative;
-  top: 96%;
-  left: 0%;
   width: 100%;
-  margin-bottom: 1.25em;
-  height: 40px;
+  height: 70px;
+  display: flex;
+  text-align: center;
 }
 footer p {
   text-align: center;
