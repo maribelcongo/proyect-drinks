@@ -3,8 +3,8 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: #fcf3f3;
-  cursor: pointer;
+  background-color: #fd5dc0;
+
   border-radius: 8px;
   color: #080808;
   display: flex;
@@ -27,6 +27,7 @@
   display: flex;
   justify-content: center;
   margin: 5px;
+  gap: 15px;
 }
 p {
   margin: auto;
@@ -37,6 +38,7 @@ p {
   width: 100px;
   border-radius: 20px;
   cursor: pointer;
+  border: none;
 }
 
 .confirmar-eliminar:hover {
@@ -72,21 +74,20 @@ p {
   justify-content: center;
   z-index: 1000;
   background-color: aliceblue;
-}
 
-.modal_content p {
-  margin: 0 0 20px;
-}
+  .modal_content p {
+    margin: 0 0 20px;
+  }
 
-#cerrarModalBtn {
-  padding: 10px 15px;
-  background-color: #f72cba;
-  color: rgb(7, 7, 7);
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-#cerrarModalBtn:hover {
-  background-color: #f0a7d7;
+  #cerrarModalBtn {
+    padding: 10px 15px;
+    background-color: #f72cba;
+    color: rgb(7, 7, 7);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  &:hover {
+    background-color: #f0a7d7;
+  }
 }

@@ -4,8 +4,16 @@ function filterDrinks() {
   const searchIngredient = document.getElementById("searchIngredient");
 
   // Muestra el campo de búsqueda correspondiente y oculta el otro
-  searchInput.style.display = option === "name" ? "block" : "none";
-  searchIngredient.style.display = option === "ingredients" ? "block" : "none";
+  if (option === "name") {
+    searchInput.style.display = "block";
+    searchIngredient.style.display = "none";
+  } else if (option === "ingredients") {
+    searchInput.style.display = "none";
+    searchIngredient.style.display = "block";
+  } else {
+    searchInput.style.display = "none";
+    searchIngredient.style.display = "none";
+  }
 }
 
 function searchCocktail() {
@@ -22,20 +30,24 @@ function searchCocktail() {
     fetchUrl += `?${option}=${encodeURIComponent(searchValue)}`;
   }
 
-  // Llama a la función getDrinks con la URL actualizada y muestra el botón "Volver"
+  // Mostrar solo el cargador y ocultar lo que esté visible
+  document.getElementById("container").style.display = "none";
+  document.getElementById("detail-container").style.display = "none";
+  loader.style.display = "block";
+
+  // Llamar a la función getDrinks con la URL actualizada y mostrar el botón "Volver"
   getDrinks(fetchUrl, true);
 }
-
+// Esta función se llama cuando se vuelve a la página de inicio
 function goBackToHome() {
   getDrinks(baseUrl, false);
   document.getElementById("searchInput").value = "";
   document.getElementById("searchIngredient").value = "";
   document.getElementById("option").value = "buscar";
   filterDrinks();
-
-  // El botón "Volver" se oculta automáticamente dentro de getDrinks
 }
 
+// Esta función limpia los valores de búsqueda
 function clearSearch() {
   const searchInput = document.getElementById("searchInput");
   const searchIngredient = document.getElementById("searchIngredient");
@@ -45,15 +57,8 @@ function clearSearch() {
   searchInput.value = "";
   searchIngredient.value = "";
 
-  // Reiniciar la visualización según la opción seleccionada actualmente
-  if (option.value === "name") {
-    searchInput.style.display = "block";
-    searchIngredient.style.display = "none";
-  } else if (option.value === "ingredients") {
-    searchInput.style.display = "none";
-    searchIngredient.style.display = "block";
-  } else {
-    searchInput.style.display = "none";
-    searchIngredient.style.display = "none";
-  }
+  filterDrinks(); //  actualizar la visibilidad al limpiar
 }
+
+// Llamar a filterDrinks cuando la página cargue para inicializar el estado de los campos
+window.onload = filterDrinks;

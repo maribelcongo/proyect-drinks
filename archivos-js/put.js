@@ -35,13 +35,13 @@ const viewDetail = (id) => {
                <button class="edit_detail_btn" onclick="editDetail(${drink.id})">Editar</button>
                <button class="delete_detail_btn" onclick="showModal(${id})">Eliminar</button>
                 <div class="modal-contenedor hidden" id="modal-${id}">
-                  <p>¿Estás seguro que deseas borrar esta card?</p>
+                  <p>¿Estás seguro que deseas borrar este coctel ?</p>
                   <div class="btn-modal">
-                  <button class="confirmar-eliminar" onclick="deleteDetail(${id})">Eliminar card</button>
+                  <button class="confirmar-eliminar" onclick="deleteDetail(${id})">Eliminar coctel</button>
                   <button class="cancelar" onclick="hideModal(${id})">Cancelar</button>
                   </div>
             </div>
-            
+
           </div>
           <div id="editFormContainer"></div>
         </div>
@@ -94,11 +94,11 @@ const editDetail = (id) => {
 
           <label for="editIngredients">Ingredientes (separados por coma):</label>
           <input type="text" id="editIngredients" name="editIngredients" value="${ingredientsList}" required>
-         
+
           <div class="btn-save-sumit">
           <button type="submit" class="save-btn">Guardar Cambios</button>
           <button type="button" onclick="viewDetail(${id})" class="cancel-edit">Cancelar</button>
-          
+
           </div>
         </form>
         </div>

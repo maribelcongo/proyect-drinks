@@ -25,10 +25,9 @@
     <!-- ---------------------------------------------------------------------------- -->
 
     <main class="main-container" id="main">
-      <!-- formulario barra busqueda -->
-
       <form id="searchForm">
         <select id="option" class="search-box" onchange="filterDrinks()">
+          <!-- Evento change añadido -->
           <option value="buscar">Buscar</option>
           <option value="name">Nombre</option>
           <option value="ingredients">Ingredientes</option>
@@ -56,17 +55,17 @@
           <button type="button" class="clear-btn" onclick="clearSearch()">
             Borrar
           </button>
-          <button
-            type="button"
-            class="back-btn"
-            id="backBtn"
-            style="display: none"
-            onclick="goBackToHome()"
-          >
-            Volver
-          </button>
-          <!-- Oculta el botón al inicio -->
         </div>
+
+        <button
+          type="button"
+          class="back-btn"
+          id="backBtn"
+          style="display: none"
+          onclick="goBackToHome()"
+        >
+          Volver
+        </button>
       </form>
 
       <!--fin barra busquedad-->

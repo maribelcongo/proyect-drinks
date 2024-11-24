@@ -94,15 +94,16 @@
   width: 100px;
   border-radius: 20px;
   cursor: pointer;
-}
+  border: none;
 
-.delete_detail_btn:hover {
-  border: 1px solid;
-  box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.5),
-    0 0 20px rgba(255, 255, 255, 0.2);
-  outline-offset: 15px;
-  outline-color: rgba(245, 43, 43, 0);
-  text-shadow: 1px 1px 2px #f72cba;
+  &:hover {
+    border: 1px solid;
+    box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.5),
+      0 0 20px rgba(255, 255, 255, 0.2);
+    outline-offset: 15px;
+    outline-color: rgba(245, 43, 43, 0);
+    text-shadow: 1px 1px 2px #f72cba;
+  }
 }
 
 .go_back_btn {
