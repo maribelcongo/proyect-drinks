@@ -122,7 +122,11 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 15px;
+  margin: 20px;
+  display: flex;
+  top: 140px;
+  position: absolute;
+  width: 100%;
 }
 @media (max-width: 768px) {
   #searchForm {
@@ -433,6 +437,7 @@ button .btn-nav:hover {
   justify-content: center;
   margin: 0em auto;
   font-family: "Marcellus SC", serif;
+  margin-top: 90px;
 }
 
 .detail-card_all {
@@ -690,7 +695,7 @@ footer p {
   justify-content: center;
   max-width: 1100px;
   margin: auto;
-  margin-top: 40px;
+  margin-top: 80px;
 }
 @media (max-width: 600px) {
   #container {

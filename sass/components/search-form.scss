@@ -6,7 +6,13 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 15px;
+  margin: 20px;
+  display: flex;
+
+  top: 140px;
+  position: absolute;
+
+  width: 100%;
   @include respond-to(medium) {
     width: 95%;
   }
